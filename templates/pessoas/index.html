@@ -1,0 +1,16 @@
+{% if pessoas %}
+    <ul>
+    {% for p in pessoas %}
+        <li>
+            <a href="/pessoas/{{ p.id }}/">{{ p.nome }}</a>
+            <a href="/pessoas/editar/{{ p.id }}/">(Editar)</a>
+            <a href="/pessoas/excluir/{{ p.id }}/">(X)</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Não há registro de pessoas.</p>
+{% endif %}
+
+<a href="/pessoas/criar/">Novo</a>
+

@@ -1,0 +1,37 @@
+{% extends '_base.html' %}
+
+{% load static %}
+
+{% block content %}
+<body>
+    <img src=" {% static 'img/msg1.png' %}" class="d-block w-100" alt="...">
+    <br>
+    <div class="col-lg-12">
+      <div class="p-10">
+        <h1>Título</h1>
+        <br>
+        <table  width="100%"cellpadding="10">
+        <tr>
+
+        <td width="50%" valign="top">
+        Este é um texto. Este é um texto.
+        Este é um texto. Este é um texto.
+        Este é um texto.
+        </td>
+
+        <td width="50%" valign="top">
+        Outro texto.Outro texto. Outro texto.
+        Outro texto. Outro texto. Outro texto.
+        Outro texto.
+        </td>
+
+        </tr>
+        </table>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+{% endblock %}

@@ -1,0 +1,80 @@
+
+    {% load static %}
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home/inicio">
+        <img src=" {% static 'img/logo.png' %}" class="d-block w-25">
+        <div class="sidebar-brand-text mx-3">PSIF</div>
+    </a>
+    
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0 ">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" href="/home/inicio">
+            <img src="{% static 'img/inicio.png' %}" height="22" >
+            <span>Início</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0 ">
+
+    <!-- Nav Item - Dashboard -->
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <img src="{% static 'img/agenda.png' %}" height="22" >
+            <span>Consultas</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="/consultas/">Marcar consultas</a>
+                <a class="collapse-item" href="/consultas/myConsulta">Minhas consultas</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item active">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <img src="{% static 'img/info.png' %}" height="22" >
+            <span>Informações</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="/home/informacao">info1</a>
+                <a class="collapse-item" href="/home/informacao2">info2</a>
+            </div>
+        </div>
+    </li>
+    
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <li class="nav-item active">
+        <a class="nav-link" href="/pacientes/">
+            <img src="{% static 'img/paciente.png' %}" height="20" >
+            <span>Pacientes</span>
+        </a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+    
+
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+
+    
+
+</ul>

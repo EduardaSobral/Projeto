@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Detalhes da consulta</h4>
+                No dia {{ consulta.data }} haverá uma consulta no horario {{consulta.horario}} com o psicologo de CRP {{consulta.CRP}} 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

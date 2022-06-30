@@ -1,0 +1,75 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Discentes </h4>
+                <div class="text-right mr-3">
+                    <a href="/discentes/criar">
+                        <button type="button" class="btn mb-1 btn-info">
+                            Add <span class="btn-icon-right"><i class="fa fa-plus"></i></span>
+                        </button>
+                    </a>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table header-border">
+                        <thead>
+                            <tr>
+                                <th width="60%">Nome</th>
+                                <th width="20%">Data de nascimento</th>
+                                <th width="20%">Email</th>
+                                <th width="20%">Telefone</th>
+                                <th width="20%">Matricula</th>
+                                <th width="20%">Filiação</th>
+                                <th width="20%">Tipo sanguineo</th>
+                                <th width="20%">Peso</th>
+                                <th width="20%">Altura</th>
+                                <th> </th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if discentes %}
+                            {% for d in discentes %}
+                            <tr>
+                                <td> <a href="/discentes/{{ d.id }}/">{{ d.nome }}</a> </td>
+                                <td> <a href="/discentes/{{ d.id }}/">{{ d.data_nasc }}</a> </td>
+                                <td> <a href="/discentes/{{ d.id }}/">{{ d.email }}</a> </td>
+                                <td> <a href="/discentes/{{ d.id }}/">{{ d.telefone }}</a> </td>
+                                <td> <a href="/discentes/{{ d.id }}/">{{ d.matricula }}</a> </td>
+                                <td> <a href="/discentes/{{ d.id }}/">{{ d.filiacao }}</a> </td>
+                                <td> <a href="/discentes/{{ d.id }}/">{{ d.tipo_sanguineo }}</a> </td>
+                                <td> <a href="/discentes/{{ d.id }}/">{{ d.peso }}</a> </td>
+                                <td> <a href="/discentes/{{ d.id }}/">{{ d.altura }}</a> </td>
+                                <td>
+                                    <a href="/discentes/editar/{{ d.id }}">
+                                        <button type="button" class="btn mb-1 btn-primary">
+                                            Editar <span class="btn-icon-right"> <i class="fa fa-edit"></i> </span>
+                                        </button>
+                                    </a>
+                                </td>
+                                <td> <a href="/discentes/excluir/{{ d.id }}">
+                                        <button type="button" class="btn mb-1 btn-danger">
+                                            Excluir <span class="btn-icon-right"> <i class="fa fa-close"></i> </span>
+                                        </button>
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            {% else %}
+                            <tr>
+                                <td>Não há discentes cadastradas.</td>
+                            </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
