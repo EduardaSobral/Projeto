@@ -1,6 +1,59 @@
 {% extends '_base.html' %}
 
 {% block content %}
-
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Minhas consultas </h4>
+                <div class="table-responsive">
+                    <table class="table header-border">
+                        <thead>
+                            <tr>
+                                <th width="20%">Psicologo</th>
+                                <th width="30%">Data da consulta</th>
+                                <th width="30%">Matricula</th>
+                                <th> </th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if consultas %}
+                            {% for c in consultas %}
+                                <tr>
+                                    <td> <a href="/psicologo/detail">{{ c.CRP }}</a></td>
+                                    <td> {{ c.data }} </td>
+                                    <td> {{ c.matricula }} </td>
+                                    {%if is_Alunos%}
+                                    <td>
+                                        <a href="/consultas/editar/{{ c.id }}">
+                                            <button type="button" class="btn mb-1 btn-primary">
+                                                Solicitar consulta <span class="btn-icon-right"> <i class="fa fa-edit"></i> </span>
+                                            </button>
+                                        </a>
+                                    </td>
+                                    {%else%}
+                                    <td>
+                                        <a href="/consultas/excluirM/{{ c.id }}">
+                                            <button type="button" class="btn mb-1 btn-danger">
+                                                Cancelar consulta<span class="btn-icon-right"> 
+                                            </button>
+                                        </a>
+                                    </td>
+                                    {%endif%}
+                                </tr>
+                            {% endfor %}
+                            {% else %}
+                            <tr>
+                                <td>Não há consultas no momento.</td>
+                            </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

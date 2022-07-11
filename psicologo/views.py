@@ -3,6 +3,7 @@ from psicologo.form import PsicologoForm
 from django.http import HttpResponseRedirect
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import Group
+from django.contrib.auth.decorators import login_required
 
 def register(request):
     
@@ -18,15 +19,12 @@ def register(request):
             group = Group.objects.get(name='Psicologo')
             new_user.groups.add(group)
 
-            # is_Psicologo = request.user.groups.filter(name='Psicologo').exists()
-
             return HttpResponseRedirect("/psicologo/login/")
     else:    
         form = PsicologoForm()
     
     context = {
         'form': form,
-        # 'is_Psicologo' : is_Psicologo
     }
     
     return render(request, 'registration/register.html', context)
@@ -48,3 +46,7 @@ def password(request):
     
     return render(request, 'registration/forgot-password.html', context)
 
+@login_required
+def Psicologo(request):
+
+    return render(request, 'psicologo/detail.html', {})

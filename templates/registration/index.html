@@ -5,15 +5,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Pacientes </h4>
-                <div class="text-right mr-3">
-                    <a href="/pacientes/criar">
-                        <button type="button" class="btn mb-1 btn-info">
-                            Adicionar pacientes <span class="btn-icon-right"><i class="fa fa-plus"></i></span>
-                        </button>
-                    </a>
-                </div>
-
+                <h4 class="card-title">Cadastros </h4>
                 <div class="table-responsive">
                     <table class="table header-border">
                         <thead>
@@ -24,31 +16,26 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% if pacientes %}
-                            {% for p in pacientes %}
+                            {% if cadastros %}
+                            {% for c in cadastros %}
                             <tr>
-                                <td> <a href="/pacientes/{{ p.id }}/">{{ p.nome }}</a> </td>
-                                
+                                <td> <a href="/accounts/ c.id }}/">{{ c.nome }}</a> </td>
                                 <td>
-                                    <a href="/pacientes/editar/{{ p.id }}">
+                                    <a href="/accounts/editar/{{ c.id }}">
                                         <button type="button" class="btn mb-1 btn-primary">
-                                            Adicionar observações <span class="btn-icon-right"></span>
+                                            Editar <span class="btn-icon-right"> <i class="fa fa-edit"></i> </span>
                                         </button>
                                     </a>
                                 </td>
-                                <td> <a href="/pacientes/excluir/{{ p.id }}">
+                                <td> <a href="/accounts/excluir/{{ c.id }}">
                                         <button type="button" class="btn mb-1 btn-danger">
-                                            Excluir paciente<span class="btn-icon-right"> </span>
+                                            Excluir <span class="btn-icon-right"> <i class="fa fa-close"></i> </span>
                                         </button>
                                     </a>
                                 </td>
                             </tr>
                             {% endfor %}
-                            {% else %}
-                            <tr>
-                                <td>Não há pacientes cadastrados.</td>
-                            </tr>
-                            {% endif %}
+                            {% endif  %}
                         </tbody>
                     </table>
                 </div>

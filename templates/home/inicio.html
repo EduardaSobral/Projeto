@@ -4,31 +4,59 @@
 
 {% block content %}
 <body>
-    <img src=" {% static 'img/msg1.png' %}" class="d-block w-100" alt="...">
-    <br>
-    <div class="col-lg-12">
-      <div class="p-10">
-        <h1>Título</h1>
-        <br>
-        <table  width="100%"cellpadding="10">
-        <tr>
+  <style>
+    h1 {
+      color: #4e73df;
+    }
+    </style>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <img src=" {% static 'img/home1.png' %}"style="float: right" width="500" alt="...">
+            <br>
+            <div class="col-lg-12">
+              <div class="p-10">
+                <br>
+                
+                <br>
+                <div class="p-3">
+                <h1>Setor Psicológico do Instituto Federal</h1>
+                <br>
+                <h5>Agende sua consulta com um psicologo do instituto a qualquer hora com a plataforma</h5>
+                
+              </div>
+                <td>
+                  <div class="text-center">
+                  <a href="/consultas/" >
+                      <button type="button" class="btn mb-1 btn-primary">
+                          Agendar Consulta <span class="btn-icon-right"></span>
+                       </button>
+                  </a>
+                </div>
+               </td>
+                <table  width="100%"cellpadding="10">
+                  <tr>
+                  <td width="50%" valign="top">
+                    <div style="text-align: justify;">
+                    O site do setor psicológico do Instituto Federal Baiano Campus Guanambi surgiu com a necessidade de aprimoramento do setor. Visto a falta de conhecimento dos discentes sobre os benefícios oferecidos, esse site visa oferecer de forma organizada a disponibilidade de agendamento de consultas psicologicas, assim como informações sobre o departamento e saúde mental.
+                  </div>
+                </td>
 
-        <td width="50%" valign="top">
-        Este é um texto. Este é um texto.
-        Este é um texto. Este é um texto.
-        Este é um texto.
-        </td>
+                    <td width="50%" valign="top">
+                      Caso necessário, busque orientações na sala do psicologo.
+                      <br>
+                      Localização: Pavilhão I, em frente a biblioteca, na última porta
+                    </td>
 
-        <td width="50%" valign="top">
-        Outro texto.Outro texto. Outro texto.
-        Outro texto. Outro texto. Outro texto.
-        Outro texto.
-        </td>
-
-        </tr>
-        </table>
+                  </tr>
+                </table>
+              </div>
+            </div>
+        </div>
       </div>
     </div>
+  </div>
     <br>
     <br>
     <br>

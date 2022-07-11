@@ -24,5 +24,4 @@ class CadastroForm(UserCreationForm):
         'password2'
         )
 
-
     

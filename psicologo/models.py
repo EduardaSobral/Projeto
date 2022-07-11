@@ -8,7 +8,7 @@ class Psicologo(User):
     data_nasc = models.DateField(("Data de nascimento (ano-mês-dia)"))
     telefone = models.CharField(max_length=15)
     CRP = models.CharField(max_length=15)
-    CPF = models.CharField(max_length=15)
+    CPF = models.CharField(max_length=15, null=True)
     
     def __str__(self):
         return self.nome

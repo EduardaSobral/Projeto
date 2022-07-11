@@ -17,7 +17,6 @@ class PsicologoForm(UserCreationForm):
         'data_nasc',
         'telefone',
         'CRP',
-        'CPF',
         'username',
         'email',
         'password1',

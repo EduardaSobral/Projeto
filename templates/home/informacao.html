@@ -4,30 +4,131 @@
 
 {% block content %}
 <body>
-    
-    <div class="col-lg-12">
-      <div class="p-10">
-        <h1>Título</h1>
-        <br>
-        <table  width="100%"cellpadding="10">
-        <tr>
+  <style>
+    h1 {
+      color: #4e73df;
+    }
+    h4 {
+      color: #4e73df;
+    }
+    h5 {
+      color: #4e73df;
+    }
+    </style>
+  <div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body"><div>
+              <h1>O que é a ansiedade?</h1>
+              <table  width="100%"cellpadding="10">
+              <tr>
+                <div style="float: left">
+                  <img class="img-profile" src="{% static 'img/ansiedade.jpg' %}" height="180" >
+              
+              </div>
+                  <div style="text-align: justify;">
+                    <br>
+                  A ansiedade é uma reação do corpo humano que pode ser considerada prejudicial ou não, isso varia 
+                  em cada circunstância e intensidade. Em nível normal, proporciona motivação, porém ao acontecer de
+                  forma excessiva pode se tornar prejudicial ao funcionamento psíquico do ser. Ela pode fazer com que
+                  o indivíduo se sinta aflito, angustiado, tenso, ameaçado por aquilo que está por vir e com incertezas
+                  sobre as diversas situações do cotidiano. Tais sintomas podem ser constantes e sem motivos aparentes, 
+                  mas podem surgir também apenas em situações específicas. 
+              
+                  </div>
+                  
+                  <br>
+                  <br>
+                  <h4 class="card-title">Como uma pessoa ansiosa se sente</h4>
+                  <div style="text-align: justify;">
+                    A pessoa ansiosa tende a pensar excessivamente sobre alguma situação futura ou assunto, isso faz com
+                    que sentimentos de preocupação e receio a acompanhem durante seu dia a dia, gerando assim desconfortos.
+                    Vale lembrar que, é de extrema importância que todos busquem compreender e deixar os julgamentos de lado
+                    ao se tratar de uma pessoa ansiosa, pois o transtorno de ansiedade pode acontecer com todos em qualquer 
+                    fase da vida. 
+                
+                    </div>
+                    <br>
+                    <div style="float: right;">
+                      <img class="img-profile" src="{% static 'img/pesadelo.webp' %}" height="200" >
+                  
+                  </div>
+                  <h4 class="card-title">O que é uma crise de ansiedade?</h4>
+                  <div style="text-align: justify;">
+                    A crise de ansiedade é uma reação onde o emocional do indivíduo está nervoso e em pânico extremo, é um 
+                    indicativo grave do transtorno de ansiedade e por isso, torna-se essencial procurar ajuda profissional 
+                    após a primeira experiência. No momento de uma crise, o corpo entra em estado de alerta, o que provoca 
+                    uma descarga anormal de adrenalina, fazendo com que o medo, inquietude e sensações negativa tomem conta
+                     da pessoa, aprisionando-a neste estado emocional. 
+                
+                    </div>
+                    <br>
 
-        <td width="50%" valign="top">
-        Este é um texto. Este é um texto.
-        Este é um texto. Este é um texto.
-        Este é um texto.
-        </td>
+                <h4 class="card-title">Atitudes que estimulam a ansiedade e podem ser evitadas</h4>
+                
+                  <div style="text-align: justify;">
+                    Para cuidar da ansiedade ou evita-la deve-se buscar ajuda profissional de um psicólogo,
+                     uma vez que esta é a maneira mais eficiente para combater a mesma. Porém, alguns atos 
+                     da vivencia diária podem ser mudados, para que assim, haja uma melhora significativa. 
+                     Alguns deles são:
+              
+                  </div>
 
-        <td width="50%" valign="top">
-        Outro texto.Outro texto. Outro texto.
-        Outro texto. Outro texto. Outro texto.
-        Outro texto.
-        </td>
-
-        </tr>
+                  <br>
+                  <td width="50%" valign="top">
+                  <h5 class="card-title">Café em excesso</h5>
+                  <div style="text-align: justify;">
+                    A cafeína estimula a ansiedade e por isso deve ser evitada, não ao ponto de deixar de 
+                    tomar café completamente, mas sim, diminuir a quantidade de cafezinhos ao longo do dia, 
+                    trocando-os por sucos, chá, água...
+              
+                  </div>
+                  <br>
+                  <h5 class="card-title">Preocupação em excesso</h5>
+                  <div style="text-align: justify;">
+                    Sabe-se o quanto é difícil evitar as preocupações, porém ao longo das atividades diárias, 
+                    a pessoa pode “trabalhar” uma forma que se sinta bem para lidar com isso e assim tentar 
+                    reduzir essas preocupações.
+              
+                  </div>
+                <br>
+                  <h5 class="card-title">Vida sedentária</h5>
+                  <div style="text-align: justify;">
+                    Os exercícios físicos fazem com que a tensão muscular diminua, estimulam o sistema imunológico
+                     e distraem a mente. Busque se encontrar nos diversos tipos de exercício físico, você provavelmente
+                      irá encontrar algum que goste, assim, comece a praticar.
+                  </div>
+                  <br>
+                  </td>
+                  <td width="50%" valign="top">
+                <h5 class="card-title">Pensar negativamente</h5>
+                  <div style="text-align: justify;">
+                    Os nossos pensamentos estão diretamente ligados a ansiedade, por isso, se você busca pensar de forma 
+                    positiva, está evitando a ansiedade. Busque sempre que necessário, mentalizar sentimentos positivos 
+                    como amor e gratidão, lembrar de acontecimentos bons da sua vida e de tudo aquilo que te motiva como
+                     pessoas importantes, animais de estimação, sonhos, etc. 
+                  </div>
+                <br>
+                <div style="text-align: justify;">
+                  <div style="float: right">
+                    <img class="img-profile" src="{% static 'img/dor.png' %}" height="150" >
+                
+                </div>
+                <h5 class="card-title">Poucas horas de sono</h5>
+                  
+                    Se você está dormindo mal e consequentemente está dormindo pouco, isso deve ser mudado, pois noites 
+                    mal dormidas geram inúmeros problemas para o corpo humano. Sendo assim, busque relaxar e não usar o
+                    celular algum tempo antes de dormir, para que suas energias possam ser recarregadas e assim consiga
+                    enfrentar sua rotina normalmente. 
+                    
+                  </div>
+                  
+                </td>              
         </table>
       </div>
     </div>
+        </div>
+    </div></div>
     <br>
     <br>
     <br>

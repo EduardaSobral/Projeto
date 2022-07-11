@@ -17,7 +17,7 @@ def register(request):
             group = Group.objects.get(name='Alunos')
             new_user.groups.add(group)
 
-            # is_Alunos = request.user.groups.filter(name='Alunos').exists()
+            
 
             return HttpResponseRedirect("/accounts/login/")
     else:    
@@ -25,7 +25,6 @@ def register(request):
     
     context = {
         'form': form,
-        # 'is_Alunos': is_Alunos
     }
     
     return render(request, 'registration/register.html', context)
@@ -76,4 +75,15 @@ def editar(request, cadastro_id):
     }
     
     return render(request, 'registration/editar.html', context)  
+
+def index(request):
+
+    print('Está aqui!')
+    cadastros = Cadastro.objects.all()
+
+    context = {
+        'cadastros': cadastros,
+    }
+    
+    return render(request, 'registration/index.html', context)
     

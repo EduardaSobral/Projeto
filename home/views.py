@@ -28,4 +28,4 @@ def redireciona(request):
     if request.user.groups.filter(name='Alunos').exists():
         return HttpResponseRedirect('/home/inicio')
     else:
-        return HttpResponseRedirect('/pacientes/')
+        return HttpResponseRedirect('/consultas/')

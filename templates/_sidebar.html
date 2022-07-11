@@ -1,9 +1,10 @@
 
     {% load static %}
+    
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home/inicio">
-        <img src=" {% static 'img/logo.png' %}" class="d-block w-25">
+        <img src=" {% static 'img/logo.png' %}" width="45">
         <div class="sidebar-brand-text mx-3">PSIF</div>
     </a>
     
@@ -30,7 +31,7 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="/consultas/">Marcar consultas</a>
+                <a class="collapse-item" href="/consultas/">Agendar consultas</a>
                 <a class="collapse-item" href="/consultas/myConsulta">Minhas consultas</a>
             </div>
         </div>
@@ -48,28 +49,16 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="/home/informacao">info1</a>
-                <a class="collapse-item" href="/home/informacao2">info2</a>
+                <a class="collapse-item" href="/home/informacao">O que é a ansiedade?</a>
+                <a class="collapse-item" href="/home/informacao2">Como agir em uma crise</a>
             </div>
         </div>
     </li>
     
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
-
-    <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item active">
-        <a class="nav-link" href="/pacientes/">
-            <img src="{% static 'img/paciente.png' %}" height="20" >
-            <span>Pacientes</span>
-        </a>
-    </li>
-
-    <!-- Divider -->
-    <hr class="sidebar-divider">
+    <br>
     
-
-
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
